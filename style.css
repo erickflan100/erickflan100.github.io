@@ -6,7 +6,8 @@
 }
 .main {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background: #222121;
     display: flex;
     align-items: center;
@@ -61,7 +62,7 @@
     background: #222121;
     color: #fff;
 }
-.text {
+.texto {
     width: 80%;
     height: auto;
     letter-spacing: 1px;
@@ -69,5 +70,6 @@
     color: #FFF;
     font-family: 'Courier New', Courier, monospace  ;
     margin-top: 50px;
+    margin-bottom: 50px;
     background: #222121;
 }
