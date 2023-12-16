@@ -1,9 +1,19 @@
 const squares = document.querySelectorAll('.square');
 const player = document.querySelector('.player');
+const menu = document.querySelector('.menu');
+const btn_start = document.querySelector('.btn_start');
+const player_name = document.querySelector('#player_name');
+var name_player = ""
 var click = 0;
 var ganhou = false;
 const array = [];
 const arraySquares = [];
+
+btn_start.addEventListener('click', () => {
+    name_player = player_name.value.toUpperCase();
+    player.textContent = `${name_player} comece o jogo!`;
+    menu.style.display = 'none';
+})
 
 function game () {
     squares.forEach(square => {
@@ -16,13 +26,13 @@ function game () {
                     click = 1;
                     setTimeout(() => {
                         player.textContent = 'PC é a sua vez!';
-                    }, 15)
+                    }, 5)
                     const key = square.getAttribute('key');
                     array.push([key, "X"]);
                     checkWinner ();
                     setTimeout(() => {
                         pc()
-                    }, 500)
+                    }, 10)
                 }
             }
         });
@@ -48,7 +58,7 @@ function pc () {
         ['2X', '5X'],
         ['5X', '8X'],
         ['3X', '5X'],
-        ['6X', '8X'],//AQUI
+        ['6X', '8X'],
         ['0X', '6X'],
         ['1X', '7X'],
         ['2X', '8X'],
@@ -73,7 +83,7 @@ function pc () {
         ['4O', '7O'],
         ['2O', '5O'],
         ['5O', '8O'],
-        ['3O', '5O'],//AQUI
+        ['3O', '5O'],
         ['6O', '8O'],
         ['0O', '6O'],
         ['1O', '7O'],
@@ -96,7 +106,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['2', 'O']);
                         checkWinner();
@@ -108,7 +118,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['0', 'O']);
                         checkWinner();
@@ -120,7 +130,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['8', 'O']);
                         checkWinner();
@@ -132,7 +142,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['0', 'O']);
                         checkWinner();
@@ -144,7 +154,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['5', 'O']);
                         checkWinner();
@@ -156,7 +166,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['3', 'O']);
                         checkWinner();
@@ -168,7 +178,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['8', 'O']);
                         checkWinner();
@@ -180,7 +190,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['6', 'O']);
                         checkWinner();
@@ -192,7 +202,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['2', 'O']);
                         checkWinner();
@@ -204,7 +214,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['6', 'O']);
                         checkWinner();
@@ -216,7 +226,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['6', 'O']);
                         checkWinner();
@@ -228,7 +238,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['0', 'O']);
                         checkWinner();
@@ -240,7 +250,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['7', 'O']);
                         checkWinner();
@@ -252,7 +262,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['1', 'O']);
                         checkWinner();
@@ -264,7 +274,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['8', 'O']);
                         checkWinner();
@@ -276,7 +286,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['2', 'O']);
                         checkWinner();
@@ -288,7 +298,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -300,7 +310,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['7', 'O']);
                         checkWinner();
@@ -312,7 +322,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['3', 'O']);
                         checkWinner();
@@ -324,7 +334,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -336,7 +346,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['5', 'O']);
                         checkWinner();
@@ -348,7 +358,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -360,7 +370,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -372,7 +382,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['1', 'O']);
                         checkWinner();
@@ -390,7 +400,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['2', 'O']);
                         checkWinner();
@@ -402,7 +412,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['0', 'O']);
                         checkWinner();
@@ -414,7 +424,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['8', 'O']);
                         checkWinner();
@@ -426,7 +436,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['0', 'O']);
                         checkWinner();
@@ -438,7 +448,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['5', 'O']);
                         checkWinner();
@@ -450,7 +460,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['3', 'O']);
                         checkWinner();
@@ -462,7 +472,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['8', 'O']);
                         checkWinner();
@@ -474,7 +484,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['6', 'O']);
                         checkWinner();
@@ -486,7 +496,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['2', 'O']);
                         checkWinner();
@@ -498,7 +508,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['6', 'O']);
                         checkWinner();
@@ -510,7 +520,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['6', 'O']);
                         checkWinner();
@@ -522,7 +532,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['0', 'O']);
                         checkWinner();
@@ -534,7 +544,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['7', 'O']);
                         checkWinner();
@@ -546,7 +556,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['1', 'O']);
                         checkWinner();
@@ -558,7 +568,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['8', 'O']);
                         checkWinner();
@@ -570,7 +580,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['2', 'O']);
                         checkWinner();
@@ -582,7 +592,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -594,7 +604,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['7', 'O']);
                         checkWinner();
@@ -606,7 +616,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['3', 'O']);
                         checkWinner();
@@ -618,7 +628,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -630,7 +640,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['5', 'O']);
                         checkWinner();
@@ -642,7 +652,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -654,7 +664,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['4', 'O']);
                         checkWinner();
@@ -666,7 +676,7 @@ function pc () {
                         squareToPlace.classList.add('active');
                         click = 0;
                         setTimeout(() => {
-                            player.textContent = 'Player 1 é a sua vez!';
+                            player.textContent = `${name_player} é a sua vez!`;
                         }, 15);
                         array.push(['1', 'O']);
                         checkWinner();
@@ -683,7 +693,7 @@ function pc () {
         randomSquare.classList.add('active');
         click = 0;
         setTimeout(() => {
-            player.textContent = 'Player 1 é a sua vez!';
+            player.textContent = `${name_player} é a sua vez!`;
         }, 15)
         const key = randomSquare.getAttribute('key');
         array.push([key, "O"]);
@@ -718,7 +728,7 @@ function checkWinner () {
     for (const combo of winningCombosPl1) {
         if (combo.every(key => arrayKeys.includes(key))) {
             setTimeout(() => {
-                alert('JOGADOR 1 GANHOU');
+                alert(`${name_player} ganhou!`);
                 ganhou = true;
                 window.location.reload();
             }, 10);
@@ -728,7 +738,7 @@ function checkWinner () {
     for (const combo of winningCombosPl2) {
         if (combo.every(key => arrayKeys.includes(key))) {
             setTimeout(() => {
-                alert('PC GANHOU');
+                alert('IA ganhou');
                 window.location.reload();
             }, 10);
             return;
