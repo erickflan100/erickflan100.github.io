@@ -52,3 +52,45 @@ h1{
     background-color: #958c8c;
     color: #000;
 }
+
+@media screen and (max-width: 720px) {
+    .square_container{
+        width: 490px;
+        height: 490px;
+    }
+    .square{
+        width: 150px;
+        height: 150px;
+        font-size: 120px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .square_container{
+        width: 320px;
+        height: 320px;
+    }
+    .square{
+        width: 93px;
+        height: 93px;
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .square_container{
+        width: 250px;
+        height: 250px;
+    }
+    .square{
+        width: 70px;
+        height: 70px;
+        font-size: 60px;
+    }
+    .player{
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
