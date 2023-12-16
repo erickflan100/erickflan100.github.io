@@ -47,6 +47,14 @@ function pc () {
         ['4X', '7X'],
         ['2X', '5X'],
         ['5X', '8X'],
+        ['3X', '5X'],
+        ['6X', '8X'],//AQUI
+        ['0X', '6X'],
+        ['1X', '7X'],
+        ['2X', '8X'],
+        ['2X', '6X'],
+        ['0X', '8X'],
+        ['0X', '2X'],
     ];
     const winningCombosPC = [
         ['0O', '1O'],
@@ -65,7 +73,7 @@ function pc () {
         ['4O', '7O'],
         ['2O', '5O'],
         ['5O', '8O'],
-        ['3O', '5O'],
+        ['3O', '5O'],//AQUI
         ['6O', '8O'],
         ['0O', '6O'],
         ['1O', '7O'],
@@ -555,7 +563,7 @@ function pc () {
                         array.push(['8', 'O']);
                         checkWinner();
                     }
-                }else{
+                }else if(combo == winningCombosPl1[15]){
                     const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '2');
                     if (squareToPlace) {
                         squareToPlace.textContent = 'O';
@@ -565,6 +573,102 @@ function pc () {
                             player.textContent = 'Player 1 é a sua vez!';
                         }, 15);
                         array.push(['2', 'O']);
+                        checkWinner();
+                    }
+                }else if(combo == winningCombosPl1[16]){
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '4');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['4', 'O']);
+                        checkWinner();
+                    }
+                }else if(combo == winningCombosPl1[17]){
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '7');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['7', 'O']);
+                        checkWinner();
+                    }
+                }else if(combo == winningCombosPl1[18]){
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '3');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['3', 'O']);
+                        checkWinner();
+                    }
+                }else if(combo == winningCombosPl1[19]){
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '4');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['4', 'O']);
+                        checkWinner();
+                    }
+                }else if(combo == winningCombosPl1[20]){
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '5');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['5', 'O']);
+                        checkWinner();
+                    }
+                }else if(combo == winningCombosPl1[21]){
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '4');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['4', 'O']);
+                        checkWinner();
+                    }
+                }else if(combo == winningCombosPl1[22]){
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '4');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['4', 'O']);
+                        checkWinner();
+                    }
+                }else{
+                    const squareToPlace = availableSquares.find(square => square.getAttribute('key') === '1');
+                    if (squareToPlace) {
+                        squareToPlace.textContent = 'O';
+                        squareToPlace.classList.add('active');
+                        click = 0;
+                        setTimeout(() => {
+                            player.textContent = 'Player 1 é a sua vez!';
+                        }, 15);
+                        array.push(['1', 'O']);
                         checkWinner();
                     }
                 }
